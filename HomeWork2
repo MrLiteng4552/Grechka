@@ -1,0 +1,14 @@
+#include "clocale"
+#include "vector"
+#include "iostream"
+#include "time.h"
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, ".UTF-8");
+	vector<int> vec{ 34, 56, 87, 99, 133, 477, 4099, 4959 };
+    for (int i = vec.size() - 1; i >= 0; i--)
+    {
+        cout << vec[i] << endl;
+    }
+}
