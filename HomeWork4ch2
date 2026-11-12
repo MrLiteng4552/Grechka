@@ -1,0 +1,36 @@
+#include "iostream"
+#include "string"
+#include "clocale"
+#include "time.h"
+
+using namespace std;
+
+int getHours(int totalMinutes) 
+{
+    return totalMinutes / 60;
+}
+
+int getMinutes(int totalMinutes) 
+{
+    return totalMinutes % 60;
+}
+
+void printTime(int totalMinutes) 
+{
+    int hours = getHours(totalMinutes);
+    int minutes = getMinutes(totalMinutes);
+    cout << "Это " << hours << " ч " << minutes << " мин" << endl;
+}
+
+int main() 
+{
+    setlocale(LC_ALL, "Russian");
+
+    int totalMinutes;
+    cout << "Сколько всего минут? ";
+    cin >> totalMinutes;
+
+    printTime(totalMinutes);
+
+    return 0;
+}
