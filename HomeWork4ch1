@@ -1,0 +1,33 @@
+#include "iostream"
+#include "string"
+#include "clocale"
+#include "time.h"
+
+
+using namespace std;
+int sum(int a, int b) 
+{
+    return a + b;
+}
+
+int subtract(int a, int b) 
+{
+    return a - b;
+}
+
+int multiply(int a, int b) 
+{
+    return a * b;
+}
+
+int main() 
+{
+    srand(static_cast<unsigned int>(time(NULL)));
+    setlocale(LC_ALL, ".UTF-8");
+    int a, b;
+    cin >> a >> b;
+
+    cout << sum(a, b) << endl;
+    cout << subtract(a, b) << endl;
+    cout << multiply(a, b) << endl;
+}
